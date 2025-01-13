@@ -54,6 +54,9 @@
             margin-top: 0;
             color: #222;
         }
+        .details {
+            display: none;
+        }
         footer {
             background: #333;
             color: #fff;
@@ -62,6 +65,12 @@
             margin-top: 20px;
         }
     </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -70,49 +79,65 @@
     </header>
 
     <nav>
-        <a href="#acceptable-use">Acceptable Use</a>
-        <a href="#data-classification">Data Classification</a>
-        <a href="#asset-management">Asset Management</a>
-        <a href="#social-media">Social Media</a>
-        <a href="#access-control">Access Control</a>
-        <a href="#business-continuity">Business Continuity</a>
-        <a href="#privacy-policy">Privacy</a>
+        <a href="#acceptable-use" onclick="toggleDetails('details-acceptable-use')">Acceptable Use</a>
+        <a href="#data-classification" onclick="toggleDetails('details-data-classification')">Data Classification</a>
+        <a href="#asset-management" onclick="toggleDetails('details-asset-management')">Asset Management</a>
+        <a href="#social-media" onclick="toggleDetails('details-social-media')">Social Media</a>
+        <a href="#access-control" onclick="toggleDetails('details-access-control')">Access Control</a>
+        <a href="#business-continuity" onclick="toggleDetails('details-business-continuity')">Business Continuity</a>
+        <a href="#privacy-policy" onclick="toggleDetails('details-privacy-policy')">Privacy</a>
     </nav>
 
     <section>
         <div id="acceptable-use" class="policy">
             <h2>Acceptable Use Policy</h2>
-            <p>Bcorp's Acceptable Use Policy ensures responsible management of its ostentatious keys, protecting the company's assets and reputation.</p>
+            <div id="details-acceptable-use" class="details">
+                <p>The creation of an Acceptable Use Policy (AUP) specifically for Bcorp's ostentatious keys is described in this project. The AUP lays forth rules for employees, vendors, and affiliates, stressing the decorative nature of the keys and the need of following procedures. It upholds Bcorp's principles while preserving assets and good name. The initiative emphasizes the value of organized key management and promotes a culture of accountability through this AUP. All things considered, it provides valuable perspectives on how to create and carry out policies in organizational contexts.</p>
+                <p><strong>Overview:</strong> The goal of Bcorp's Acceptable Use Policy for Keys is to uphold the distinctiveness, inventiveness, and fun that characterize our business. We work hard to make sure that none of our expensive keys are accidentally or purposefully misused, therefore safeguarding our staff, clients, and business. These keys are entirely cosmetic and have no functional use, despite their outrageous price starting at $100,000.</p>
+                <p><strong>Purpose:</strong> This guideline outlines the appropriate usage of Bcorp's ostentatious keys, which are intended only for aesthetic purposes. Misuse or improper management of these keys may cause financial loss and harm to the company's and the individuals' reputations...</p>
+            </div>
         </div>
 
         <div id="data-classification" class="policy">
             <h2>Data Classification Policy</h2>
-            <p>Provides guidelines for identifying, categorizing, and safeguarding data assets, ensuring compliance and minimizing risks.</p>
+            <div id="details-data-classification" class="details">
+                <p>[Data Classification Policy Content Here]</p>
+            </div>
         </div>
 
         <div id="asset-management" class="policy">
             <h2>Asset Management Policy</h2>
-            <p>Details the structured management of Bcorp's resources, including the procurement and maintenance of its decorative keys.</p>
+            <div id="details-asset-management" class="details">
+                <p>[Asset Management Policy Content Here]</p>
+            </div>
         </div>
 
         <div id="social-media" class="policy">
             <h2>Social Media Policy</h2>
-            <p>Encourages employees to responsibly represent the brand while maintaining professionalism and integrity online.</p>
+            <div id="details-social-media" class="details">
+                <p>[Social Media Policy Content Here]</p>
+            </div>
         </div>
 
         <div id="access-control" class="policy">
             <h2>Access Control Policy</h2>
-            <p>Focuses on protecting information systems by controlling access based on roles and responsibilities, ensuring confidentiality.</p>
+            <div id="details-access-control" class="details">
+                <p>[Access Control Policy Content Here]</p>
+            </div>
         </div>
 
         <div id="business-continuity" class="policy">
             <h2>Business Continuity Policy</h2>
-            <p>Outlines strategies for ensuring the uninterrupted operation of Bcorp's business, even during unforeseen disruptions.</p>
+            <div id="details-business-continuity" class="details">
+                <p>[Business Continuity Policy Content Here]</p>
+            </div>
         </div>
 
         <div id="privacy-policy" class="policy">
             <h2>Privacy Policy</h2>
-            <p>Describes how Bcorp collects, uses, and safeguards customer information to uphold trust and comply with regulations.</p>
+            <div id="details-privacy-policy" class="details">
+                <p>[Privacy Policy Content Here]</p>
+            </div>
         </div>
     </section>
 
